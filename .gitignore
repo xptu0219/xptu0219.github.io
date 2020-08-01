@@ -1,0 +1,7 @@
+*.txt
+*.pyc
+.idea/
+static/
+artfile/
+.doc
+MyBlog/settings.py
