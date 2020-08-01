@@ -1,7 +1,4 @@
-*.txt
 *.pyc
-.idea/
-static/
-artfile/
-.doc
-MyBlog/settings.py
+*.xml
+.idea
+apps/*/migrations/*.py

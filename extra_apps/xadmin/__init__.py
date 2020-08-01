@@ -50,7 +50,7 @@ def autodiscover():
 
     for app_config in apps.get_app_configs():
         mod = import_module(app_config.name)
-        # Attempt to import the app's admin module.
+        # Attempt to import the apps's admin module.
         try:
             before_import_registry = site.copy_registry()
             import_module('%s.adminx' % app_config.name)
@@ -61,7 +61,7 @@ def autodiscover():
             # (see #8245).
             site.restore_registry(before_import_registry)
 
-            # Decide whether to bubble up this error. If the app just
+            # Decide whether to bubble up this error. If the apps just
             # doesn't have an admin module, we can ignore the error
             # attempting to import it, otherwise we want it to bubble up.
             if module_has_submodule(mod, 'adminx'):

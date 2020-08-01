@@ -89,6 +89,6 @@ class CommentsAdmin(object):
         self.message_user(msg % {'count': n_comments, 'action': done_message(n_comments)}, 'success')
 
 # Only register the default admin if the model is the built-in comment model
-# (this won't be true if there's a custom comment app).
+# (this won't be true if there's a custom comment apps).
 if 'django.contrib.comments' in settings.INSTALLED_APPS and (get_model() is Comment):
     xadmin.site.register(Comment, CommentsAdmin)
